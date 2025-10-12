@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaista Noureen | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+    <canvas id="particleCanvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">SN</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#leadership" class="nav-link">Leadership</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-name">Shaista Noureen</h1>
+                <div class="hero-title">
+                    <span class="typing-text"></span>
+                    <span class="cursor"></span>
+                </div>
+                <p class="hero-location">Crafting smart solutions through code.</p>
+                <div class="hero-buttons">
+                    <a href="#experience" class="btn btn-primary">View My Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-image">
+                        <div class="profile-placeholder">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="100" cy="80" r="40" fill="#58A6FF" opacity="0.6"/>
+                                <path d="M60 140 Q100 110 140 140 L140 180 L60 180 Z" fill="#58A6FF" opacity="0.6"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p>I am currently studying Computer Science at UET Lahore. I'm passionate about programming, software development, and problem solving. Skilled in multiple programming languages and always eager to innovate.</p>
+                        <p class="about-dream">My dream is to work at <span class="highlight">Microsoft</span>.</p>
+                        <a href="/Shaista_CV.pdf" download class="btn btn-download">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3 class="category-title">Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="95">
+                            <div class="skill-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                    <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+                                </svg>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="90">
+                            <div class="skill-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                    <line x1="8" y1="21" x2="16" y2="21"/>
+                                    <line x1="12" y1="17" x2="12" y2="21"/>
+                                </svg>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Full-Stack Development</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                    <path d="M2 17l10 5 10-5"/>
+                                    <path d="M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">AI/ML</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="92">
+                            <div class="skill-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="18" y1="20" x2="18" y2="10"/>
+                                    <line x1="12" y1="20" x2="12" y2="4"/>
+                                    <line x1="6" y1="20" x2="6" y2="14"/>
+                                </svg>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Data Models</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="88">
+                            <div class="skill-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="18" r="3"/>
+                                    <circle cx="6" cy="6" r="3"/>
+                                    <circle cx="18" cy="6" r="3"/>
+                                    <line x1="18" y1="9" x2="12" y2="15"/>
+                                    <line x1="6" y1="9" x2="12" y2="15"/>
+                                </svg>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Version Control (Git)</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="90">
+                            <div class="skill-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">GitHub</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="88">
+                            <div class="skill-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                                </svg>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">C++</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="4 17 10 11 4 5"/>
+                                    <line x1="12" y1="19" x2="20" y2="19"/>
+                                </svg>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">C</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="92">
+                            <div class="skill-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="2" y1="12" x2="22" y2="12"/>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                </svg>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">HTML/CSS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="90">
+                            <div class="skill-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                                    <path d="M7 7h10"/>
+                                    <path d="M7 12h10"/>
+                                    <path d="M7 17h6"/>
+                                </svg>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="87">
+                            <div class="skill-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                                </svg>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">SQL & MongoDB</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 87%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="category-title">Soft Skills</h3>
+                    <div class="soft-skills">
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Management</span>
+                        <span class="skill-tag">Art & Craft</span>
+                        <span class="skill-tag">Content Creation</span>
+                        <span class="skill-tag">Photography</span>
+                        <span class="skill-tag">Videography</span>
+                        <span class="skill-tag">Researching Technologies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience section">
+        <div class="container">
+            <h2 class="section-title">Experience & Projects</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">June – July 2025</span>
+                        <h3>Python Developer</h3>
+                        <p>Developed a File Organizer Tool using Python & Flask with GUI and backend integration. Implemented GitHub version control for collaborative development.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">May – June 2025</span>
+                        <h3>Machine Learning Engineer</h3>
+                        <p>Built and evaluated ML models including KNN, Naive Bayes, Random Forest, and Decision Tree. Analyzed performance using precision, recall, and F1-score metrics.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="projects-subtitle">Featured Projects</h3>
+            <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+    </section>
+
+    <section id="education" class="education section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-card">
+                <div class="edu-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                    </svg>
+                </div>
+                <div class="edu-content">
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <p class="edu-institution">University of Engineering and Technology, Lahore</p>
+                    <p class="edu-duration">2023 – 2027</p>
+                    <div class="edu-status">Currently Pursuing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership" class="leadership section">
+        <div class="container">
+            <h2 class="section-title">Leadership & Societies</h2>
+            <div class="leadership-grid">
+                <div class="leadership-card">
+                    <div class="leadership-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Deputy Director HR</h3>
+                    <p class="leadership-org">ASME Society</p>
+                </div>
+                <div class="leadership-card">
+                    <div class="leadership-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <h3>Female Coordinator</h3>
+                    <p class="leadership-org">Wasaib Society UET NC</p>
+                </div>
+                <div class="leadership-card">
+                    <div class="leadership-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                            <line x1="7" y1="2" x2="7" y2="22"/>
+                            <line x1="17" y1="2" x2="17" y2="22"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <line x1="2" y1="7" x2="7" y2="7"/>
+                            <line x1="2" y1="17" x2="7" y2="17"/>
+                            <line x1="17" y1="17" x2="22" y2="17"/>
+                            <line x1="17" y1="7" x2="22" y2="7"/>
+                        </svg>
+                    </div>
+                    <h3>Reels Head</h3>
+                    <p class="leadership-org">UMS Society</p>
+                </div>
+                <div class="leadership-card">
+                    <div class="leadership-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                            <path d="M2 2l7.586 7.586"/>
+                            <circle cx="11" cy="11" r="2"/>
+                        </svg>
+                    </div>
+                    <h3>Member – Graphic Design Team</h3>
+                    <p class="leadership-org">ACM Society</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:shaistanoureen55@gmail.com">shaistanoureen55@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+923037282165">0303 7282165</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🔗</div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <a href="https://linkedin.com/in/shaistanoureen-1329a8290" target="_blank" rel="noopener">linkedin.com/in/shaistanoureen-1329a8290</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🐙</div>
+                        <div>
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/Shaista45" target="_blank" rel="noopener">github.com/Shaista45</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Shaista Noureen. All rights reserved.</p>
+            <p>Crafted with passion and code</p>
+        </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
