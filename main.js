@@ -1,10 +1,29 @@
 const projects = [
   {
+    name: "Attendance Management System",
+    description: "A comprehensive attendance management system built using the .NET framework.",
+    githubUrl: "https://github.com/Shaista45/AttendenceManagementSystem",
+    imageUrl: "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=400"
+  },
+  {
+    name: "Urdu Alphabet Recognition",
+    description: "A machine learning system designed to accurately recognize and classify Urdu alphabets.",
+    githubUrl: "https://github.com/Shaista45/Urdu_Alphabets_Recognition_System",
+    imageUrl: "https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=400"
+  },
+  {
+    name: "Study Planner App",
+    description: "A cross-platform mobile application built in Flutter to help students manage their study schedules.",
+    githubUrl: "https://github.com/Shaista45/study_planner_app",
+    imageUrl: "https://images.pexels.com/photos/273153/pexels-photo-273153.jpeg?auto=compress&cs=tinysrgb&w=400"
+  },
+  {
     name: "Car Rental Management System",
     description: "A web app to manage car rentals, bookings, and customers.",
     githubUrl: "https://github.com/Shaista45/Car_Rental_Management_System",
     imageUrl: "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=400"
   },
+
   {
     name: "GitWrap Visualizer",
     description: "An interactive GitHub activity visualizer dashboard.",
@@ -389,10 +408,40 @@ function init() {
   handleContactForm();
   handleResumeDownload();
   initCustomCursor();
+  handle3DAvatar();
 }
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', init);
 } else {
   init();
+}
+function handle3DAvatar() {
+  const container = document.querySelector('.avatar-container');
+  const avatar = document.querySelector('.profile-avatar');
+
+  if (!container || !avatar) return;
+
+  container.addEventListener('mousemove', (e) => {
+    // Get the dimensions and position of the container
+    const rect = container.getBoundingClientRect();
+    
+    // Find where the mouse is relative to the center of the image
+    const x = e.clientX - rect.left; 
+    const y = e.clientY - rect.top;  
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    // Calculate how much to rotate (the '15' is the max degree of tilt)
+    const rotateX = ((y - centerY) / centerY) * -15;
+    const rotateY = ((x - centerX) / centerX) * 15;
+
+    // Apply the 3D rotation
+    avatar.style.transform = `scale(1.05) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+
+  // Reset the image when the mouse leaves
+  container.addEventListener('mouseleave', () => {
+    avatar.style.transform = `scale(1) rotateX(0) rotateY(0)`;
+  });
 }
